@@ -1,12 +1,11 @@
 import React from "react";
 import { LuMapPinCheckInside } from "react-icons/lu";
+import { Formik } from "formik";
+import { ContactFormSchema } from "../Formschema/ContactFormSchema";
+import InputFieldComp from "../Contactus/InputFieldComp";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    console.log(formData.get("name"));
-  };
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-600 to-purple-800 py-20">
       <div className="container flex flex-col sm:flex-row gap-4 mt-10 ">
@@ -32,54 +31,61 @@ const Contact = () => {
         <div className="bg-gray-100 border p-8 rounded-lg shadow-2xl shadow-black w-full sm:w-3/5">
           <h1>SEND US AN EMAIL</h1>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            {/* Name Field */}
-            <div className="flex flex-row gap-9">
-              <label>Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Enter your name"
-                className="border"
-              />
-            </div>
+          {/* Contatus Form for Contactus Page */}
 
-            {/* Email Field */}
-            <div className="flex flex-row gap-10">
-              <label>Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Enter your email"
-              />
-            </div>
+          <Formik
+            initialValues={{ name: "", email: "", textbox: "" }}
+            onSubmit={(data, { resetForm }) => {
+              alert("form submitted");
+              resetForm();
+            }}
+            validationSchema={ContactFormSchema}
+          >
+            {({ handleChange, handleSubmit, values, errors }) => {
+              return (
+                <>
+                  <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+                    <InputFieldComp
+                      type="text"
+                      label="Name"
+                      name="name"
+                      placeholder="Enter your name"
+                      className="border"
+                    />
 
-            {/* Message Field */}
-            <div className="flex flex-row gap-4">
-              <label>Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-                placeholder="Enter your message"
-              />
-            </div>
+                    {/* Email Field */}
 
-            {/* Submit Button */}
-            <div>
-              <button
-                className="bg-gradient-to-t from-primary to-secondary text-white px-4 py-1 rounded-full hover:scale-105 duration-300"
-                type="submit"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+                    <InputFieldComp
+                      type="email"
+                      label="Email"
+                      name="email"
+                      placeholder="Enter your email"
+                    />
+
+                    <InputFieldComp
+                      label="Message"
+                      name="textbox"
+                      type="text"
+                      className="h-12"
+                      isTextarea
+                      row="4"
+                      cols="50"
+                      placeholder="Enter your message"
+                    />
+
+                    {/* Submit Buton*/}
+
+                    <button
+                      className="bg-gradient-to-t from-primary to-secondary text-white px-4 py-1 rounded-full hover:scale-105 duration-300"
+                      type="submit"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                </>
+              );
+            }}
+          </Formik>
         </div>
       </div>
     </div>

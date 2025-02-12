@@ -13,6 +13,7 @@ const Project = () => {
           {ProjectDes.map((project) => (
             <Card
               key={project.projectId}
+              appcode={project.projectCode}
               name={project.projectName}
               description={project.projectDescription}
               projectImg={project.projectImg}

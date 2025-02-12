@@ -1,0 +1,40 @@
+<label>Name</label>
+<input
+              type="text"
+              id="name"
+              name="name"
+              rxequired
+              placeholder="Enter your name"
+              className="border"
+            />
+
+            {/* Email Field */}
+
+            <label>Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+
+            {/* Message Field */}
+
+            <label>Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Enter your message"
+            />
+
+            {/* Submit Button */}
+
+            <button
+              className="bg-gradient-to-t from-primary to-secondary text-white px-4 py-1 rounded-full hover:scale-105 duration-300"
+              type="submit"
+            >
+              Submit
+            </button>
