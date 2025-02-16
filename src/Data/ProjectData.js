@@ -2,6 +2,7 @@ import img from "../assets/food-logo.jpg";
 import kolunHire from "../assets/kolunHire.png";
 import calculator from "../assets/calculator.jpg";
 import weather from "../assets/weather.jpg";
+import empassion from "../assets/empassion.jpg";
 
 const projectDes = [
   {
@@ -20,16 +21,29 @@ const projectDes = [
     projectDescription:
       "Developed a full-stack application that allows users to book equipment for their projects. Integrated a payment gateway...",
     projectImg: kolunHire,
-    toolUsed: ["HTML", "CSS", "Javascript", "React", "Node.js", "MongoDB"],
+    toolUsed: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Wordpress",
+      "MySQL",
+      "Woocommerce",
+    ],
   },
   {
     projectId: 3,
-    projectCode: "Hamrobazar",
-    projectName: "E-commerce Website",
-    projectDescription:
-      "Built a modern e-commerce platform with React, Node.js, and MongoDB. Implemented cart functionality...",
-    projectImg: img,
-    toolUsed: ["React", "Node.js", "MongoDB"],
+    projectCode: "Empassion",
+    projectName: "Empassion",
+    projectDescription: "Emprace the life of your dreams",
+    projectImg: empassion,
+    toolUsed: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Wordpress",
+      "MySQL",
+      "Woocommerce",
+    ],
   },
   {
     projectId: 4,
