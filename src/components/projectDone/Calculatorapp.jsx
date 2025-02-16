@@ -22,7 +22,7 @@ const Calculatorapp = () => {
   return (
     <div className="h-screen bg-gradient-to-r from-blue-600 to-purple-800 ">
       <div className="container  flex flex-col items-center  ">
-        <div className="p-8 rounded-lg shadow-lg max-w-fit border-4 mt-10">
+        <div className="p-8 rounded-lg shadow-lg max-w-fit mt-10">
           <div className="text-right text-2xl mb-4">
             <input
               type="text"
