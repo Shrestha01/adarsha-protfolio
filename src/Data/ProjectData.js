@@ -1,6 +1,7 @@
 import img from "../assets/food-logo.jpg";
 import kolunHire from "../assets/kolunHire.png";
 import calculator from "../assets/calculator.jpg";
+import weather from "../assets/weather.jpg";
 
 const projectDes = [
   {
@@ -47,6 +48,15 @@ const projectDes = [
       "Developed a calculator app with React that performs basic arithmetic operations...",
     projectImg: calculator,
     toolUsed: ["HTML", "Javascript", "React", "MongoDB"],
+  },
+  {
+    projectId: 6,
+    projectCode: "Weatherapp",
+    projectName: "Weather App",
+    projectDescription:
+      "Developed a Weather app with React that shows the weather of the searched city...",
+    projectImg: weather,
+    toolUsed: ["HTML", "Javascript", "React"],
   },
 ];
 export default projectDes;
