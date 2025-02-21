@@ -1,9 +1,11 @@
 import { GoogleMap } from "@react-google-maps/api";
 import React, { useState } from "react";
 import GoogleMaps from "./GoogleMaps";
+import NewCl from "./NewCl";
 
 const About = () => {
   const [num, setNum] = useState(0);
+  console.log("i am from about");
 
   return (
     <div className=" min-h-screen bg-gradient-to-r from-blue-600 to-purple-800 py-20">
@@ -16,6 +18,7 @@ const About = () => {
           >
             Increment
           </button>
+          <NewCl />
         </div>
       </div>
     </div>

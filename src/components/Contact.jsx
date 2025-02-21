@@ -3,7 +3,14 @@ import { LuMapPinCheckInside } from "react-icons/lu";
 import { Formik } from "formik";
 import { ContactFormSchema } from "../Formschema/ContactFormSchema";
 import InputFieldComp from "../Contactus/InputFieldComp";
-import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toast";
+
+import {
+  database as db,
+  set,
+  ref,
+  onValue,
+} from "../components/firebaseConfig/config";
 
 const Contact = () => {
   return (
@@ -36,8 +43,17 @@ const Contact = () => {
           <Formik
             initialValues={{ name: "", email: "", textbox: "" }}
             onSubmit={(data, { resetForm }) => {
-              alert("form submitted");
-              resetForm();
+              console.log(data.name);
+              const userId = new Date().getTime();
+
+              set(ref(db, "contactData/" + userId), data).then((err) => {
+                if (!err) {
+                  toast.success("Data Inserted");
+                  resetForm();
+                } else {
+                  toast.error("Thank you for your Feedback");
+                }
+              });
             }}
             validationSchema={ContactFormSchema}
           >
@@ -70,6 +86,7 @@ const Contact = () => {
                       isTextarea
                       row="4"
                       cols="50"
+                      sm:cols="20"
                       placeholder="Enter your message"
                     />
 
@@ -82,6 +99,7 @@ const Contact = () => {
                       Submit
                     </button>
                   </form>
+                  <ToastContainer delay={2500} />
                 </>
               );
             }}
