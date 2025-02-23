@@ -66,7 +66,7 @@ const Contact = () => {
                       label="Name"
                       name="name"
                       placeholder="Enter your name"
-                      className="border"
+                      className="rounded-xl sm:w-1/2 w-full h-8"
                     />
 
                     {/* Email Field */}
@@ -75,6 +75,7 @@ const Contact = () => {
                       type="email"
                       label="Email"
                       name="email"
+                      className="rounded-xl sm:w-1/2 w-full h-8"
                       placeholder="Enter your email"
                     />
 
@@ -82,11 +83,10 @@ const Contact = () => {
                       label="Message"
                       name="textbox"
                       type="text"
-                      className="h-12"
+                      className="rounded-xl sm:w-1/2 w-full h-20"
                       isTextarea
                       row="4"
                       cols="50"
-                      sm:cols="20"
                       placeholder="Enter your message"
                     />
 

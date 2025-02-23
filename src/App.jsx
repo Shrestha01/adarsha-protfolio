@@ -11,6 +11,7 @@ import Project from "./components/Project";
 import ProjectList from "./components/projectDone/ProjectList";
 import projectDes from "./Data/ProjectData";
 import Contactt from "./components/Contactt";
+import Adminhome from "./components/admin/Adminhome";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/adarsha-protfolio" element={<Home />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/admin" element={<Adminhome />} />
 
         <Route path="/project/:id" element={<ProjectList />} />
         <Route

@@ -6,15 +6,6 @@ import empassion from "../assets/empassion.jpg";
 
 const projectDes = [
   {
-    projectId: 1,
-    projectCode: "Hamrobazar",
-    projectName: "E-commerce Website",
-    projectDescription:
-      "Built a modern e-commerce platform with React, Node.js, and MongoDB. Implemented cart functionality...",
-    projectImg: img,
-    toolUsed: ["React", "Node.js", "MongoDB"],
-  },
-  {
     projectId: 2,
     projectCode: "Kolunhire",
     projectName: "Equipment Booking App",
@@ -45,15 +36,7 @@ const projectDes = [
       "Woocommerce",
     ],
   },
-  {
-    projectId: 4,
-    projectCode: "Hamrobazar",
-    projectName: "E-commerce Website",
-    projectDescription:
-      "Built a modern e-commerce platform with React, Node.js, and MongoDB. Implemented cart functionality...",
-    projectImg: img,
-    toolUsed: ["React", "Node.js", "MongoDB"],
-  },
+
   {
     projectId: 5,
     projectCode: "Calculatorapp",
