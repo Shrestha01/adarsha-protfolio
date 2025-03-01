@@ -39,7 +39,7 @@ const techCategories = {
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-600 to-purple-800 py-20 text-white">
+    <div className="min-h-screen bg-gradient-to-r from-blue-600 to-purple-800 py-4 sm:py-20 text-white">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-primary mb-4">About Me</h2>

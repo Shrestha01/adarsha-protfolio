@@ -76,7 +76,11 @@ const Navbar = () => {
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-white text-2xl focus:outline-none bg-transparent"
             >
-              {menuOpen ? <FaTimes /> : <FaBars />}
+              {menuOpen ? (
+                <FaTimes />
+              ) : (
+                <FaBars className="hover:text-primary" />
+              )}
             </button>
           </div>
         </div>
@@ -105,13 +109,7 @@ const Navbar = () => {
             >
               Contact Us
             </Link>
-            <Link
-              to="/todoList"
-              className="py-2 text-lg hover:text-primary"
-              onClick={() => setMenuOpen(false)}
-            >
-              TodoList
-            </Link>
+
             {/* Call Button in Mobile Menu */}
             <button
               onClick={handleCall}

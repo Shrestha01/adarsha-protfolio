@@ -5,18 +5,18 @@ function Footer() {
   return (
     <footer className="bg-gradient-to-r from-blue-800 to-purple-600 text-white py-8">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col items-center text-center space-y-6 py-6 sm:py-0 sm:space-y-0 sm:flex-row sm:justify-between ">
           {/* Column 1: About */}
-          <div>
-            <Link
-              to="/home"
-              className="flex gap-1 sm:text-3xl font-bold hover:text-primary"
-            >
-              {/* <img src={Logo} alt="Foodie Zone" className="w-10" /> */}
-              <SiAuchan />
-              <SiAuchan />
-            </Link>
-            <div className="mt-4">
+          <div className="flex flex-col items-center hover:text-primary ">
+            <div>
+              <Link to="/home" className="flex gap-1 sm:text-3xl font-bold">
+                {/* <img src={Logo} alt="Foodie Zone" className="w-10" /> */}
+                <SiAuchan />
+                <SiAuchan />
+              </Link>
+            </div>
+
+            <div className="">
               <span>E-Protfolio Application</span>
             </div>
           </div>
