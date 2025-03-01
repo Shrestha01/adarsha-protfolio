@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 
 import Todolist from "./components/Todolist";
 import Home from "./components/Home";
-import About from "./components/About";
+import About from "./components/aboutme/About";
 import Contact from "./components/Contact";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";

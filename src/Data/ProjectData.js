@@ -6,6 +6,24 @@ import empassion from "../assets/empassion.jpg";
 
 const projectDes = [
   {
+    projectId: 5,
+    projectCode: "Calculatorapp",
+    projectName: "Calculator App",
+    projectDescription:
+      "Developed a calculator app with React that performs basic arithmetic operations...",
+    projectImg: calculator,
+    toolUsed: ["HTML", "Javascript", "React", "MongoDB"],
+  },
+  {
+    projectId: 6,
+    projectCode: "Weatherapp",
+    projectName: "Weather App",
+    projectDescription:
+      "Developed a Weather app with React that shows the weather of the searched city...",
+    projectImg: weather,
+    toolUsed: ["HTML", "Javascript", "React"],
+  },
+  {
     projectId: 2,
     projectCode: "Kolunhire",
     projectName: "Equipment Booking App",
@@ -35,25 +53,6 @@ const projectDes = [
       "MySQL",
       "Woocommerce",
     ],
-  },
-
-  {
-    projectId: 5,
-    projectCode: "Calculatorapp",
-    projectName: "Calculator App",
-    projectDescription:
-      "Developed a calculator app with React that performs basic arithmetic operations...",
-    projectImg: calculator,
-    toolUsed: ["HTML", "Javascript", "React", "MongoDB"],
-  },
-  {
-    projectId: 6,
-    projectCode: "Weatherapp",
-    projectName: "Weather App",
-    projectDescription:
-      "Developed a Weather app with React that shows the weather of the searched city...",
-    projectImg: weather,
-    toolUsed: ["HTML", "Javascript", "React"],
   },
 ];
 export default projectDes;
