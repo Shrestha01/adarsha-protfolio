@@ -24,7 +24,7 @@ function Footer() {
           {/* Column 2: Quick Links */}
           <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="text-sm">
+            <ul className="text-lg sm:text-md">
               <li className="mb-2">
                 <Link to="/home" className="hover:text-primary">
                   Home

@@ -60,7 +60,7 @@ const Home = () => {
         </div>
 
         {!moreInfo && (
-          <div className="flex justify-center border-2 mt-4 ">
+          <div className="flex justify-center mt-4 ">
             <button
               className="flex items-center gap-2 font-semibold bg-gradient-to-t from-primary to-secondary px-6 py-3 rounded-full text-white hover:scale-105 duration-300"
               onClick={handleClick}
@@ -71,7 +71,7 @@ const Home = () => {
           </div>
         )}
       </div>
-      {moreInfo && <About />}
+      <div>{moreInfo && <About />}</div>
     </div>
   );
 };
